@@ -1,0 +1,52 @@
+Request Validation:
+- Verify software is on approved software list
+- Confirm manager approval if required
+- Check license availability
+- Verify system meets minimum requirements
+
+Pre-Installation Checks:
+- Confirm user's device make/model and OS version
+- Check available disk space
+- Verify administrative access method (remote tools, local admin)
+- Ensure no conflicting software is installed
+
+License Management:
+- Reserve or assign license from license pool
+- Document license assignment
+- Record license key or activation method
+- Update license tracking system
+
+Installation Process:
+- Connect to device via remote management tool
+- Download software from approved source
+- Run installation with appropriate parameters
+- Enter license key or activate via volume licensing
+- Complete installation wizard
+
+{% if software_type == 'office' %}
+Microsoft Office Installation:
+- Install via Microsoft 365 portal or SCCM
+- Sign in with user's Microsoft 365 account
+- Verify all required Office apps are installed
+- Configure default file save locations
+{% endif %}
+
+{% if software_type == 'specialized' %}
+Specialized Software:
+- Follow vendor-specific installation guide
+- Configure required integrations
+- Set up database connections if needed
+- Apply any required patches or updates
+{% endif %}
+
+Post-Installation:
+- Launch application and verify it opens correctly
+- Complete initial configuration if needed
+- Apply latest updates/patches
+- Configure user preferences if required
+
+Documentation:
+- Update software inventory
+- Record installation in asset management
+- Provide user with quick start guide if available
+- Close ticket with installation confirmation

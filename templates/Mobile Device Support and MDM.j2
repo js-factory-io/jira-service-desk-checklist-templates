@@ -1,0 +1,65 @@
+Device Identification:
+- Identify device type (iOS/Android) and model
+- Determine if corporate-owned or BYOD
+- Check device enrollment status in MDM
+- Verify user's eligibility for mobile support
+
+{% if issue_type == 'mdm_enrollment' %}
+MDM Enrollment:
+- Verify user has MDM license assigned
+- Send enrollment invitation to user
+- Guide user through enrollment steps
+- Install required MDM profiles
+- Push required corporate apps
+- Verify compliance status
+{% endif %}
+
+{% if issue_type == 'email_setup' %}
+Email on Mobile:
+- Verify user has mobile access license
+- Configure email account (Outlook/Gmail app recommended)
+- Set up Exchange ActiveSync or modern authentication
+- Test send and receive functionality
+- Configure calendar and contacts sync
+- Set up email signature
+{% endif %}
+
+{% if issue_type == 'app_issues' %}
+Corporate App Issues:
+- Verify app is pushed via MDM
+- Force app reinstall from MDM console
+- Check app permissions on device
+- Clear app cache and data
+- Update app to latest version
+- Check for device compatibility issues
+{% endif %}
+
+{% if issue_type == 'lost_stolen' %}
+Lost or Stolen Device:
+- Verify device ownership
+- Locate device using MDM (if enabled)
+- Initiate remote lock immediately
+- Initiate remote wipe if data risk confirmed
+- Disable associated accounts
+- Report to security team
+- Document incident for compliance
+{% endif %}
+
+General Mobile Troubleshooting:
+- Check device OS version is supported
+- Verify network connectivity
+- Test on Wi-Fi and cellular
+- Restart the device
+- Check for pending OS updates
+
+BYOD Specific:
+- Verify BYOD policy acceptance
+- Ensure work profile is properly configured
+- Check container app functionality
+- Verify personal data separation
+
+Resolution:
+- Confirm mobile services are working
+- Document device and issue details
+- Update MDM records if changes made
+- Provide user with mobile support resources

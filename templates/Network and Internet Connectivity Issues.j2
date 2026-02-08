@@ -1,0 +1,55 @@
+Initial Triage:
+- Identify if issue affects single user or multiple users
+- Determine if issue is wired or wireless
+- Check if user can access local resources vs internet
+- Note user's location (office, remote, traveling)
+
+Basic Connectivity Checks:
+- Verify network cable is securely connected (if wired)
+- Check Wi-Fi is enabled and connected to correct network
+- Verify airplane mode is disabled
+- Restart network adapter
+
+{% if connection_type == 'wifi' %}
+Wi-Fi Troubleshooting:
+- Forget and reconnect to wireless network
+- Check Wi-Fi signal strength
+- Verify correct SSID and credentials
+- Test connection to different access point
+- Check for wireless driver updates
+{% endif %}
+
+{% if connection_type == 'vpn' %}
+VPN Troubleshooting:
+- Verify VPN client is installed and up to date
+- Check VPN credentials are correct
+- Test internet connectivity without VPN first
+- Try alternate VPN server/gateway
+- Check if split tunneling is configured correctly
+- Verify MFA is completing successfully
+{% endif %}
+
+Network Diagnostics:
+- Run Windows Network Diagnostics
+- Check IP configuration (ipconfig /all)
+- Test DNS resolution (nslookup)
+- Ping gateway and external addresses
+- Run traceroute to identify failure point
+
+DNS Issues:
+- Flush DNS cache (ipconfig /flushdns)
+- Verify DNS server settings
+- Test with alternate DNS (8.8.8.8, 1.1.1.1)
+- Check for DNS filtering issues
+
+Advanced Troubleshooting:
+- Release and renew DHCP lease
+- Reset TCP/IP stack if needed
+- Check for proxy configuration issues
+- Review firewall settings
+
+Resolution:
+- Document root cause and resolution
+- Escalate to network team if infrastructure issue
+- Provide user with preventive guidance
+- Update knowledge base if new issue pattern

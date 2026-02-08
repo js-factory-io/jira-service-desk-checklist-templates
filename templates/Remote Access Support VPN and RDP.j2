@@ -1,0 +1,70 @@
+Issue Assessment:
+- Identify remote access method (VPN, RDP, Citrix, VDI)
+- Determine error message or connection behavior
+- Verify user is authorized for remote access
+- Check if issue is user-specific or affecting multiple users
+
+{% if access_type == 'vpn' %}
+VPN Troubleshooting:
+- Verify VPN client is installed and up to date
+- Check VPN gateway status
+- Verify user credentials are correct
+- Test MFA is completing successfully
+- Check internet connectivity before VPN
+- Try alternate VPN server/gateway
+- Review VPN client logs for errors
+- Check split tunnel vs full tunnel configuration
+- Verify no conflicting VPN clients
+- Reinstall VPN client if persistent issues
+{% endif %}
+
+{% if access_type == 'rdp' %}
+Remote Desktop Troubleshooting:
+- Verify target computer is powered on
+- Check Remote Desktop is enabled on target
+- Verify user has RDP access permissions
+- Check Network Level Authentication settings
+- Test network connectivity to target (ping)
+- Verify firewall allows RDP (port 3389)
+- Check for RDP session limits
+- Test with IP address vs hostname
+{% endif %}
+
+{% if access_type == 'citrix' %}
+Citrix Troubleshooting:
+- Verify Citrix Workspace app is installed
+- Check Citrix gateway/StoreFront status
+- Clear Citrix Workspace cache
+- Verify user has published app/desktop access
+- Test with web-based access (Citrix Web)
+- Check for Citrix Receiver version issues
+- Review Citrix Director for session info
+{% endif %}
+
+{% if access_type == 'vdi' %}
+VDI Troubleshooting:
+- Verify VDI platform status
+- Check user's desktop pool assignment
+- Verify available capacity in pool
+- Review connection broker logs
+- Test alternate connection method
+- Check display protocol settings
+{% endif %}
+
+Network and Connectivity:
+- Verify home internet is working
+- Test speed and latency
+- Check for firewall or ISP blocks
+- Try from different network if possible
+
+Authentication:
+- Verify password is current
+- Check MFA enrollment and device
+- Look for account lockout
+- Review conditional access policies
+
+Resolution:
+- Confirm remote access is working
+- Document troubleshooting steps taken
+- Provide user with remote access guide
+- Note any configuration changes made

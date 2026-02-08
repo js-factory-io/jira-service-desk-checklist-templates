@@ -1,0 +1,62 @@
+Initial Assessment:
+- Document time and date of incident discovery
+- Identify the type of security concern
+- Determine affected user(s) and device(s)
+- Assess initial severity level
+
+{% if incident_type == 'phishing' %}
+Phishing Email Response:
+- Instruct user NOT to click any links or attachments
+- Have user forward email to security team
+- Check if user clicked links or entered credentials
+- If credentials entered, initiate immediate password reset
+- Check for email forwarding rules added to mailbox
+- Report phishing URL to security tools
+- Delete phishing email from user's mailbox
+- Block sender domain if confirmed malicious
+{% endif %}
+
+{% if incident_type == 'malware_alert' %}
+Malware Alert Response:
+- Verify the alert source (antivirus, EDR)
+- Check if malware was quarantined or removed
+- Run full system scan
+- Check for persistence mechanisms
+- Review recent file downloads and executions
+- Verify no data exfiltration occurred
+- Re-image device if infection confirmed
+{% endif %}
+
+{% if incident_type == 'suspicious_popup' %}
+Suspicious Pop-up/Scam:
+- Instruct user not to call numbers or click buttons
+- Close browser or force quit application
+- Clear browser cache and cookies
+- Scan system for adware/malware
+- Check browser extensions for malicious add-ons
+- Verify no software was installed
+{% endif %}
+
+Evidence Preservation:
+- Take screenshots of suspicious content
+- Document user's description of events
+- Note any actions user took
+- Preserve logs if needed for investigation
+
+Containment Actions:
+- Isolate device from network if active threat
+- Disable compromised accounts temporarily
+- Block malicious URLs/IPs at firewall
+- Revoke suspicious OAuth app permissions
+
+User Communication:
+- Reassure user and thank them for reporting
+- Explain what happened and actions taken
+- Provide guidance on recognizing future threats
+- No blame - encourage continued reporting
+
+Escalation and Documentation:
+- Escalate to security team if confirmed incident
+- Document incident in security tracking system
+- Update user's security awareness training if needed
+- Close with full incident summary

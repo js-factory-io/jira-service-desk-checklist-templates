@@ -1,0 +1,59 @@
+Issue Identification:
+- Determine MFA method in use (authenticator app, SMS, hardware token)
+- Identify the system or application affected
+- Check if user has access to registered MFA device
+- Verify user identity through alternate means
+
+{% if issue_type == 'authenticator_app' %}
+Authenticator App Issues:
+- Verify time sync on user's mobile device
+- Check if correct account is selected in app
+- Confirm app has latest updates
+- Re-register authenticator app if codes not working
+- Provide backup codes if available
+{% endif %}
+
+{% if issue_type == 'new_device' %}
+New Device Registration:
+- Verify user identity using existing MFA or manager approval
+- Remove old device registration if applicable
+- Guide user through new device enrollment
+- Test MFA with new device
+- Ensure backup methods are configured
+{% endif %}
+
+{% if issue_type == 'expired_token' %}
+Expired Token/Session:
+- Reset MFA registration in admin portal
+- Generate new setup QR code
+- Guide user through re-enrollment
+- Verify successful authentication
+{% endif %}
+
+{% if issue_type == 'sso_errors' %}
+SSO Authentication Errors:
+- Verify SSO configuration for the application
+- Check user's account status in identity provider
+- Clear browser cache and cookies
+- Test with incognito/private browsing
+- Verify SAML/OIDC certificate validity
+- Check for identity provider service issues
+{% endif %}
+
+Temporary Access (if needed):
+- Issue temporary access code per policy
+- Set short expiration time
+- Document temporary bypass with justification
+- Ensure MFA is fully restored before closing
+
+Account Recovery:
+- Reset MFA methods if all access lost
+- Require strong identity verification
+- Notify user of all registered MFA methods
+- Recommend setting up backup authentication methods
+
+Resolution:
+- Confirm user can authenticate successfully
+- Document the issue and resolution
+- Update user's security contact information if changed
+- Remind user of MFA best practices

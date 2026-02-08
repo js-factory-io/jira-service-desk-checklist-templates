@@ -1,0 +1,59 @@
+Initial Assessment:
+- Identify the device type and model
+- Gather description of the issue
+- Determine if issue affects one user or multiple users
+- Check if device is local or network-connected
+
+{% if device_type == 'printer' %}
+Printer Troubleshooting:
+- Verify printer is powered on and online
+- Check for paper jams and paper tray status
+- Review ink/toner levels
+- Print test page from printer itself
+- Check print queue for stuck jobs
+
+Network Printer Steps:
+- Verify printer network connectivity (ping test)
+- Confirm printer IP address is correct
+- Check print server status if applicable
+- Verify user has printer mapped correctly
+
+Driver Issues:
+- Check installed driver version
+- Remove and reinstall printer driver
+- Download latest driver from manufacturer
+- Configure correct printer settings and defaults
+{% endif %}
+
+{% if device_type == 'docking_station' %}
+Docking Station Troubleshooting:
+- Verify dock is receiving power
+- Check USB-C/Thunderbolt connection
+- Update docking station firmware
+- Test with different ports on the dock
+- Verify dock compatibility with laptop model
+{% endif %}
+
+{% if device_type == 'monitor' %}
+Monitor Troubleshooting:
+- Check power and video cable connections
+- Verify correct input source selected
+- Test with different cable or port
+- Update display drivers
+- Check display settings and resolution
+{% endif %}
+
+{% if device_type == 'scanner' %}
+Scanner Troubleshooting:
+- Verify scanner is powered on
+- Check USB or network connection
+- Install/update scanner drivers
+- Test with manufacturer's scanning software
+- Check for paper path obstructions
+{% endif %}
+
+Resolution:
+- Document the fix applied
+- Provide user guidance to prevent recurrence
+- If hardware failure, initiate replacement request
+- Update asset records if applicable

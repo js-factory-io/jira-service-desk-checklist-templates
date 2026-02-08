@@ -1,0 +1,41 @@
+Request Verification:
+- Verify requester identity and authorization
+- Confirm manager or data owner approval is attached
+- Review business justification for access
+
+Access Requirements Analysis:
+- Identify the specific system/resource requested
+- Determine appropriate access level (read, write, admin)
+- Check if access conflicts with separation of duties policies
+- Verify user meets any compliance requirements
+
+Existing Access Review:
+- Check user's current access levels
+- Identify if requested access is an upgrade or new
+- Review access expiration requirements
+
+Access Provisioning:
+- Add user to appropriate security groups
+- Configure permissions in target system
+- Set access expiration date if temporary access
+- Enable MFA if required for the resource
+
+{% if access_type == 'vpn' %}
+VPN-Specific Steps:
+- Configure VPN client profile
+- Assign VPN group membership
+- Provide VPN connection instructions
+{% endif %}
+
+{% if access_type == 'shared_drive' %}
+Shared Drive-Specific Steps:
+- Add permissions to folder/drive
+- Set inheritance options appropriately
+- Verify access level (read/modify/full control)
+{% endif %}
+
+Verification and Documentation:
+- Confirm user can access the requested resource
+- Document access granted with approval reference
+- Notify requester and approver of completion
+- Update access review documentation

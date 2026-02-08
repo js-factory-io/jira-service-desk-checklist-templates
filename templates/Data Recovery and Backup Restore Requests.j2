@@ -1,0 +1,74 @@
+Request Assessment:
+- Identify what data needs to be recovered
+- Determine data location (local drive, network share, cloud storage, email)
+- Establish when the data was lost or deleted
+- Assess urgency and business impact
+
+Data Recovery Eligibility:
+- Check backup retention policy periods
+- Verify if data falls within recovery window
+- Identify appropriate backup source
+- Confirm user authorization for recovery
+
+{% if source == 'local_drive' %}
+Local Drive Recovery:
+- Check Windows Recycle Bin first
+- Look for File History/Previous Versions
+- Access backup software agent on device
+- Request restore from latest available backup
+- Consider data recovery tools if not in backup
+{% endif %}
+
+{% if source == 'network_share' %}
+Network Share Recovery:
+- Check for Volume Shadow Copy availability
+- Access Previous Versions on the share
+- Submit restore request to backup team
+- Specify exact path, filename, and date needed
+- Verify permissions to restore location
+{% endif %}
+
+{% if source == 'onedrive_sharepoint' %}
+OneDrive/SharePoint Recovery:
+- Check OneDrive/SharePoint Recycle Bin
+- Check Site Collection Recycle Bin (second-stage)
+- Review Version History for the file
+- Restore previous version if available
+- Use OneDrive/SharePoint admin restore if needed
+{% endif %}
+
+{% if source == 'email' %}
+Email Recovery:
+- Check Deleted Items folder
+- Check Recoverable Items folder (Outlook)
+- Request mailbox restore from backup
+- Specify date range and folders needed
+- Consider eDiscovery search if specific emails needed
+{% endif %}
+
+{% if source == 'database' %}
+Database Recovery:
+- Identify database and table affected
+- Determine point-in-time for recovery
+- Coordinate with DBA team
+- Request restore to non-production environment first
+- Verify data integrity before production restore
+{% endif %}
+
+Recovery Execution:
+- Initiate restore to alternate location (not overwrite)
+- Monitor restore job progress
+- Verify recovered data integrity
+- Confirm correct version/date was restored
+
+Data Delivery:
+- Move recovered data to user's accessible location
+- Verify user can access recovered files
+- Confirm data matches user's requirements
+- Clean up temporary restore location
+
+Documentation:
+- Document what was recovered and from when
+- Note any data that could not be recovered
+- Record time taken for recovery
+- Update user on backup protection going forward

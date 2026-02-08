@@ -1,0 +1,72 @@
+Request Validation:
+- Verify requester and department
+- Confirm manager approval is attached
+- Review business justification
+- Check budget allocation/cost center
+
+Equipment Specification:
+- Determine equipment type needed
+- Identify user's role and requirements
+- Select appropriate model per standards
+- Note any special requirements (high performance, portability)
+
+{% if equipment_type == 'laptop' %}
+Laptop Request:
+- Select laptop model based on role (standard, power user, developer)
+- Determine RAM and storage requirements
+- Check for specific GPU needs if applicable
+- Verify docking station compatibility
+- Include carrying case if mobile worker
+{% endif %}
+
+{% if equipment_type == 'monitor' %}
+Monitor Request:
+- Determine size requirement (24", 27", 32")
+- Check for dual monitor needs
+- Verify resolution requirements
+- Confirm mounting needs (stand, arm)
+- Check port compatibility with user's laptop
+{% endif %}
+
+{% if equipment_type == 'peripheral' %}
+Peripheral Request:
+- Identify specific peripheral needed
+- Verify compatibility with user's setup
+- Check wireless vs wired preference
+- Select from approved vendor list
+{% endif %}
+
+{% if equipment_type == 'docking_station' %}
+Docking Station Request:
+- Match dock to laptop model
+- Verify port requirements (monitors, USB)
+- Check power delivery requirements
+- Include required cables
+{% endif %}
+
+Procurement Process:
+- Check internal inventory for available stock
+- Create purchase requisition if not in stock
+- Obtain quotes from approved vendors
+- Submit for procurement approval
+- Track order status
+
+Asset Preparation:
+- Receive and inspect equipment
+- Create asset record in inventory system
+- Apply asset tag
+- Image device with corporate build (if applicable)
+- Install required software
+- Configure for user
+
+Deployment:
+- Schedule delivery or pickup with user
+- Provide user with setup instructions
+- Connect with user to verify functionality
+- Document asset assignment to user
+
+Post-Deployment:
+- Update asset management records
+- Close procurement tickets
+- Send warranty information to user
+- Schedule follow-up if needed

@@ -1,0 +1,61 @@
+Issue Identification:
+- Identify the cloud service affected (M365, Google Workspace, AWS, Azure)
+- Determine specific application or feature issue
+- Check if issue is user-specific or service-wide
+- Note any error messages or error codes
+
+Service Status Check:
+- Check service health dashboard (admin.microsoft.com, status.cloud.google.com)
+- Review any active incidents or advisories
+- Check social media for widespread reports
+- Determine if issue matches known service incident
+
+{% if service == 'microsoft365' %}
+Microsoft 365 Issues:
+- Verify user's license assignment
+- Check user's sign-in status and logs
+- Review conditional access policy blocks
+- Clear Office credential cache
+- Sign out and back into Microsoft 365 apps
+- Check for service plan feature availability
+{% endif %}
+
+{% if service == 'google_workspace' %}
+Google Workspace Issues:
+- Verify user's Google Workspace license
+- Check admin console for user status
+- Review security alerts for the user
+- Clear browser data and re-authenticate
+- Check organizational unit policies
+- Verify third-party app access settings
+{% endif %}
+
+{% if service == 'aws' %}
+AWS Console Access:
+- Verify IAM user or SSO configuration
+- Check MFA requirements
+- Review IAM policies attached to user
+- Check for permission boundaries
+- Verify correct AWS region selected
+- Review CloudTrail for access denials
+{% endif %}
+
+Authentication Troubleshooting:
+- Verify SSO/federation is working
+- Check for conditional access blocks
+- Test in private/incognito browser
+- Clear browser cache and cookies
+- Check for certificate errors
+
+License and Permissions:
+- Verify user has appropriate license
+- Check feature availability for license type
+- Review group-based licensing assignments
+- Check for license conflicts
+
+Resolution:
+- Document the issue and resolution
+- If service outage, communicate status to user
+- Update user on expected restoration time
+- Follow up when service restored
+- Log for trend analysis

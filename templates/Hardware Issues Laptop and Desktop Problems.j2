@@ -1,0 +1,47 @@
+Initial Diagnosis:
+- Gather detailed symptom description from user
+- Determine when the issue started
+- Ask about any recent changes (updates, drops, spills)
+- Identify device make, model, and asset tag
+
+Remote Troubleshooting:
+- Check if device is powered on and receiving power
+- Verify power adapter and cable connections
+- Attempt remote connection to diagnose software issues
+- Run built-in diagnostics if available
+
+{% if issue_type == 'wont_boot' %}
+Boot Failure Steps:
+- Check for POST beep codes or LED indicators
+- Attempt boot to safe mode
+- Test with external monitor if display issue suspected
+- Check BIOS/UEFI for hardware detection
+{% endif %}
+
+{% if issue_type == 'slow_performance' %}
+Performance Steps:
+- Check CPU/RAM/Disk usage in Task Manager
+- Scan for malware and unwanted software
+- Review startup programs and disable unnecessary ones
+- Check available disk space
+- Verify system is up to date
+{% endif %}
+
+{% if issue_type == 'overheating' %}
+Overheating Steps:
+- Check if vents are blocked or dusty
+- Verify fans are operating
+- Review running processes for high CPU usage
+- Check thermal paste condition if applicable
+{% endif %}
+
+Hardware Assessment:
+- Run hardware diagnostics (Dell SupportAssist, HP Diagnostics, etc.)
+- Document any error codes or failures
+- Determine if repair or replacement is needed
+
+Resolution:
+- Perform necessary repairs or schedule technician visit
+- If replacement needed, initiate equipment request
+- Backup user data before any hardware work
+- Document resolution and update asset records

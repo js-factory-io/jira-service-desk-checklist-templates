@@ -1,0 +1,82 @@
+Issue Identification:
+- Identify the application (CRM, ERP, HR system, Jira, Confluence)
+- Document specific error message or behavior
+- Determine if issue is user-specific or application-wide
+- Check when the issue started
+
+Initial Triage:
+- Verify application service status
+- Check user's access permissions
+- Confirm user is using supported browser/version
+- Check for recent application updates or changes
+
+{% if app_type == 'crm' %}
+CRM Issues (Salesforce, Dynamics, HubSpot):
+- Verify user's CRM license and role
+- Check object/record permissions
+- Clear browser cache and re-login
+- Verify integrations are functioning
+- Check for workflow/automation errors
+- Review recent data imports
+{% endif %}
+
+{% if app_type == 'erp' %}
+ERP Issues (SAP, Oracle, NetSuite):
+- Verify user's authorization roles
+- Check connection to ERP server
+- Clear local cache/temp files
+- Verify required components (Java, GUI client)
+- Check for locked transactions
+- Review user's company code access
+{% endif %}
+
+{% if app_type == 'hr_system' %}
+HR System Issues (Workday, SuccessFactors, BambooHR):
+- Verify user's HR system access
+- Check employee record status
+- Review effective-dated permissions
+- Clear browser cache
+- Check for pending workflow approvals
+- Verify SSO integration
+{% endif %}
+
+{% if app_type == 'jira' %}
+Jira Issues:
+- Verify user's Jira license and project access
+- Check project permission scheme
+- Verify issue security levels
+- Clear browser cache
+- Check for JQL syntax errors if search issue
+- Review workflow status transitions
+- Check for plugin conflicts
+{% endif %}
+
+{% if app_type == 'confluence' %}
+Confluence Issues:
+- Verify user's Confluence license
+- Check space permissions
+- Review page restrictions
+- Clear browser cache
+- Check for macro errors on page
+- Verify attachment size limits
+{% endif %}
+
+Troubleshooting Steps:
+- Clear browser cache and cookies
+- Try in incognito/private mode
+- Test with different browser
+- Check for JavaScript errors in console
+- Verify network connectivity to application
+- Check for proxy/firewall issues
+
+Escalation Path:
+- Document all troubleshooting attempted
+- Escalate to application admin if system issue
+- Contact vendor support if needed
+- Create internal bug report if defect found
+
+Resolution:
+- Document root cause and fix
+- Update knowledge base
+- Notify user of resolution
+- Monitor for recurrence

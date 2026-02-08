@@ -1,0 +1,56 @@
+Issue Identification:
+- Determine email platform (Outlook, OWA, Gmail, mobile)
+- Identify specific issue (sending, receiving, syncing, access)
+- Check if issue affects one mailbox or multiple users
+- Note any error messages received
+
+{% if issue_type == 'mailbox_full' %}
+Mailbox Full Resolution:
+- Check current mailbox size and quota
+- Review Deleted Items and empty if needed
+- Check Sent Items folder size
+- Archive old emails if archiving is available
+- Increase mailbox quota if approved
+- Educate user on mailbox management
+{% endif %}
+
+{% if issue_type == 'sync_issues' %}
+Outlook Sync Issues:
+- Verify Outlook is connected (check status bar)
+- Check Send/Receive settings
+- Repair Outlook profile
+- Clear Outlook cache
+- Recreate OST file if needed
+- Test with Outlook Web Access to isolate issue
+{% endif %}
+
+{% if issue_type == 'shared_mailbox' %}
+Shared Mailbox Access:
+- Verify user has permissions to shared mailbox
+- Add Full Access and/or Send As permissions
+- Auto-map shared mailbox or add manually
+- Check if credentials need updating
+- Verify licensing requirements are met
+{% endif %}
+
+{% if issue_type == 'spam_filtering' %}
+Spam/Filtering Issues:
+- Check spam/junk folder for missing emails
+- Review quarantine for blocked messages
+- Whitelist sender domain if legitimate
+- Adjust spam filter sensitivity if needed
+- Report false positives/negatives to security team
+{% endif %}
+
+General Email Troubleshooting:
+- Verify network connectivity
+- Check email service status
+- Test webmail access
+- Verify account is not locked or disabled
+- Check for Outlook updates
+
+Resolution:
+- Confirm email functionality is restored
+- Document resolution steps
+- Provide tips to prevent recurrence
+- Escalate to Exchange/M365 admin if server-side issue

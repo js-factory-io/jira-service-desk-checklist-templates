@@ -1,0 +1,59 @@
+Request Verification:
+- Confirm termination date from HR
+- Verify manager approval for offboarding
+- Determine if immediate or scheduled termination
+- Note any data retention or access requirements
+
+Pre-Termination Tasks:
+- Identify all systems and applications user has access to
+- Document shared resources user manages
+- Identify mailbox delegates or shared mailbox access
+- Note any pending work or critical files
+
+{% if termination_type == 'immediate' %}
+Immediate Termination:
+- Disable Active Directory account immediately
+- Revoke VPN and remote access
+- Disable MFA methods
+- Force sign-out from all active sessions
+- Block mobile device access via MDM
+{% endif %}
+
+Account Disabling:
+- Disable (do not delete) Active Directory account
+- Remove from all security groups
+- Disable Microsoft 365 / Google Workspace account
+- Revoke application-specific access
+- Remove from distribution lists
+
+Email Handling:
+- Set up mailbox forwarding to manager (if approved)
+- Configure out-of-office auto-reply
+- Convert mailbox to shared mailbox (if retention needed)
+- Document mailbox retention period
+- Remove email from mobile devices
+
+Data Management:
+- Backup user's OneDrive/Google Drive
+- Transfer ownership of shared files to manager
+- Archive or reassign shared resources
+- Document any data retention requirements
+
+Application Access Removal:
+- Revoke access to all business applications
+- Remove from CRM, ERP, HR systems
+- Disable VPN and remote access profiles
+- Remove from project management tools
+
+Equipment Return:
+- Send equipment return instructions (if remote)
+- Schedule equipment pickup or drop-off
+- Document expected equipment to be returned
+- Update asset management for returned items
+
+Post-Offboarding:
+- Verify all access has been revoked
+- Test that account cannot authenticate
+- Confirm equipment return tracking
+- Document completion with all actions taken
+- Archive offboarding record per retention policy

@@ -1,0 +1,59 @@
+Issue Gathering:
+- Document exact error message or behavior
+- Identify the application name and version
+- Determine when the issue started
+- Ask about recent changes or updates
+
+Initial Troubleshooting:
+- Close and reopen the application
+- Restart the computer
+- Check if issue occurs for other users
+- Verify network connectivity if cloud/network app
+
+{% if app_type == 'office' %}
+Microsoft Office Crashes:
+- Run Office repair (Quick Repair first, then Online Repair)
+- Disable COM add-ins one by one
+- Start application in Safe Mode
+- Update Office to latest version
+- Check for conflicting antivirus settings
+- Repair or recreate user profile
+{% endif %}
+
+{% if app_type == 'browser' %}
+Browser Issues:
+- Clear browser cache and cookies
+- Disable extensions and test
+- Reset browser to default settings
+- Try incognito/private mode
+- Update browser to latest version
+- Try alternate browser
+{% endif %}
+
+{% if app_type == 'erp_crm' %}
+Business Application Errors:
+- Clear application cache
+- Verify server/service status
+- Check user permissions and roles
+- Test in different browser if web-based
+- Verify Java/runtime requirements
+- Contact vendor support if persistent
+{% endif %}
+
+Log Analysis:
+- Check Windows Event Viewer for errors
+- Review application-specific logs
+- Look for crash dump files
+- Document error patterns
+
+Advanced Resolution:
+- Uninstall and reinstall application
+- Check for Windows updates
+- Verify system file integrity (sfc /scannow)
+- Test with different user profile
+
+Resolution:
+- Document root cause and fix
+- Update knowledge base with solution
+- Notify user of resolution
+- Monitor for recurrence

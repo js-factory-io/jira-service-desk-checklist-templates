@@ -1,0 +1,62 @@
+Issue Identification:
+- Identify the file or folder location (SharePoint, network drive, OneDrive)
+- Determine the specific access issue (can't access, permission denied, missing)
+- Verify the user's current access level
+- Check if issue affects one user or multiple users
+
+{% if issue_type == 'permission_denied' %}
+Permission Request:
+- Verify user has legitimate need for access
+- Identify the data owner or manager
+- Obtain approval for access change
+- Add user to appropriate security group
+- Set correct permission level (read, contribute, full control)
+- Test access with user
+{% endif %}
+
+{% if issue_type == 'missing_files' %}
+Missing Files Investigation:
+- Check recycle bin (local and SharePoint/OneDrive)
+- Review version history for accidental changes
+- Check if file was moved to different location
+- Search for file by name across locations
+- Review audit logs for delete/move actions
+- Check sync conflicts folder if using OneDrive
+{% endif %}
+
+{% if issue_type == 'sharepoint' %}
+SharePoint Troubleshooting:
+- Verify user can access SharePoint site
+- Check site permissions and group membership
+- Clear browser cache and try again
+- Test with different browser
+- Check for sync issues if using OneDrive sync
+- Verify SharePoint service status
+{% endif %}
+
+{% if issue_type == 'network_drive' %}
+Network Drive Issues:
+- Verify drive mapping is correct
+- Check network connectivity to file server
+- Verify user's AD group memberships
+- Test accessing share via UNC path directly
+- Check file server availability
+- Review NTFS and share permissions
+{% endif %}
+
+{% if issue_type == 'sync_issues' %}
+OneDrive/Sync Issues:
+- Check OneDrive sync status icon
+- Review files pending sync
+- Pause and resume sync
+- Check for sync conflicts
+- Verify available local disk space
+- Reset OneDrive sync if needed
+{% endif %}
+
+Resolution:
+- Confirm user can access required files
+- Document permissions changed
+- Notify data owner of access granted
+- Update access documentation
+- Schedule access review if temporary
